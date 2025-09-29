@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 15:44:03 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 13:57:14 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 22:20:22 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ void	partial_render(t_game *game, int old_x, int old_y)
 	draw_tile(game, player->player_x, player->player_y);
 	if (map->c == 0)
 		draw_tile(game, map->exit_x, map->exit_y);
+	draw_player(game, player, map);
 	draw_tile(game, 0, 0);
 	draw_tile(game, 1, 0);
-	draw_player(game, player, map);
 	draw_moves(game);
 	draw_timer(game);
 	player->not_finish_anim = 0;

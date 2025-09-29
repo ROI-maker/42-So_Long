@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/21 13:35:08 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 14:41:57 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 20:55:17 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	update_timer(t_game *game)
 
 	gettimeofday(&current_time, NULL);
 	elapsed = (current_time.tv_sec - game->start_time.tv_sec)
-	+ (current_time.tv_usec - game->start_time.tv_usec) / 1000000;
+		+ (current_time.tv_usec - game->start_time.tv_usec) / 1000000;
 	game->time_left = 45 - elapsed;
 	if (game->time_left <= 0)
 	{
@@ -34,4 +34,3 @@ int	update_timer(t_game *game)
 	}
 	return (0);
 }
-

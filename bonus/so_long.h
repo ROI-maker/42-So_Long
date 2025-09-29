@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sclaeys <sclaeys@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:03:35 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/29 16:32:26 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 20:54:47 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int			water_exit(t_game *game);
 t_graphics	*init_graphics(void);
 t_map		*init_map(char *filename);
 t_player	*init_player(void);
-t_game		*init_game(t_player *play, t_graphics *graph, t_map *map, char *name);
+t_game		*init_game(t_player *play,
+				t_graphics *graph, t_map *map, char *name);
 
 #endif

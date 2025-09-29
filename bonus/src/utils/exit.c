@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 18:04:10 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 17:26:13 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 21:01:24 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ int	water_exit(t_game *game)
 //to properly exit the program
 int	normal_exit(t_game *game)
 {
+	struct timeval	end;
+	long			elapsed;
+
 	if (game->map->c == 0)
 	{
-		struct timeval	end;
-		long			elapsed;
-
 		gettimeofday(&end, NULL);
 		elapsed = (end.tv_sec - game->start_time.tv_sec)
-		+ (end.tv_usec - game->start_time.tv_usec) / 1000000;
+			+ (end.tv_usec - game->start_time.tv_usec) / 1000000;
 		mlx_put_image_to_window(game->graphics->mlx, game->graphics->wnd,
 			game->graphics->win_image, 0, 0);
 		mlx_do_sync(game->graphics->mlx);

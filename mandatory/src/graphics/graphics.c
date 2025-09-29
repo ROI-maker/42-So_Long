@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 15:44:03 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/19 00:17:25 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 21:39:27 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	render_map(t_game *game)
 	int	x;
 	int	y;
 
-	x = 0;
 	y = 0;
 	while (y < game->map->y)
 	{

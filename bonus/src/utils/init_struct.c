@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 00:58:10 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 14:06:02 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 21:12:40 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_player	*init_player(void)
 	player->collected = 0;
 	player->moves = 0;
 	player->direction = RIGHT;
+	player->not_finish_anim = 0;
 	return (player);
 }
 

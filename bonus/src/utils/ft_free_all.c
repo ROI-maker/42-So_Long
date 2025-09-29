@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:41:06 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 16:35:27 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 20:59:27 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	ft_free_map(t_map *map)
 static void	destroy_image_array(t_graphics *graphics, void *arr[2], int size)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i < size)
 	{

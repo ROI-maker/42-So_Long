@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 13:37:22 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/21 17:25:56 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 21:02:01 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	draw_timer(t_game *game)
 	int	digits_count;
 	int	total_width;
 
-	y_pos = (game->map->y * IMG_PXL) - IMG_PXL; // hauteur pour les chiffres
+	y_pos = (game->map->y * IMG_PXL) - IMG_PXL;
 	time_left = game->time_left;
 	if (time_left < 10)
 		digits_count = 1;
@@ -51,7 +51,6 @@ void	draw_timer(t_game *game)
 	x_pos = ((game->map->x * IMG_PXL) / 2) - (total_width / 2);
 	draw_digits(game, time_left, x_pos, y_pos);
 }
-
 
 void	display_newgame_images(t_game *game)
 {
