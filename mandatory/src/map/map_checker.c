@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 21:30:43 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/18 01:46:36 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/29 23:08:03 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 // Check if the file extension is .ber
 static void	file_checker(t_map *map, t_game *game)
 {
-	if (!ft_strnstr(map->filename, ".ber", ft_strlen(map->filename)))
+	int	len;
+
+	len = ft_strlen(map->filename);
+	if (len < 4 || ft_strncmp(map->filename + len - 4, ".ber", 4) != 0)
 		error_exit(game, "ERROR: Bad file extension.");
 }
 
