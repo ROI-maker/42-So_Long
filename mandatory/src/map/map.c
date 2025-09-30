@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:03:03 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/19 01:02:16 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/30 15:27:50 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static char	*read_map_file(const char *filename, t_game *game, int *height)
 	char	*raw_map;
 	char	*tmp;
 
-	raw_map = ft_strdup("");
-	if (!raw_map)
-		error_exit(game, "ERROR: strdup in read_map_file");
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		error_exit(game, "ERROR: open failed in read_map_file");
+	raw_map = ft_strdup("");
+	if (!raw_map)
+		error_exit(game, "ERROR: strdup in read_map_file");
 	line = get_next_line(fd);
 	*height = 0;
 	while (line != NULL)

@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:41:06 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/20 15:00:26 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/30 14:58:00 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,13 @@ static void	ft_free_graphics(t_graphics *graphics)
 		destroy_image_array(graphics, graphics->down);
 		destroy_image_array(graphics, graphics->right);
 		destroy_image_array(graphics, graphics->left);
+	}
+	if (graphics->wnd)
+		mlx_destroy_window(graphics->mlx, graphics->wnd);
+	if (graphics->mlx)
+	{
+		mlx_destroy_display(graphics->mlx);
+		free(graphics->mlx);
 	}
 	free(graphics);
 }

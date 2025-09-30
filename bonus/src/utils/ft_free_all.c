@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:41:06 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/29 20:59:27 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/09/30 15:20:41 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ static void	destroy_image_array(t_graphics *graphics, void *arr[2], int size)
 
 static void	ft_free_graphics(t_graphics *graphics)
 {
-	if (!graphics)
-		return ;
 	if (graphics->ground)
 	{
 		mlx_destroy_image(graphics->mlx, graphics->ground);
@@ -71,6 +69,13 @@ static void	ft_free_graphics(t_graphics *graphics)
 		destroy_image_array(graphics, graphics->left, 2);
 		destroy_image_array(graphics, graphics->ng_images, 2);
 		destroy_image_array(graphics, graphics->digits, 10);
+	}
+	if (graphics->mlx && graphics->wnd)
+		mlx_destroy_window(graphics->mlx, graphics->wnd);
+	if (graphics->mlx)
+	{
+		mlx_destroy_display(graphics->mlx);
+		free(graphics->mlx);
 	}
 	free(graphics);
 }
