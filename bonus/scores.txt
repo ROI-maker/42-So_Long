@@ -1,3 +1,0 @@
-simon:27
-simon:32
-simon:45
