@@ -6,7 +6,7 @@
 /*   By: sclaeys <sclaeys@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 02:02:48 by sclaeys           #+#    #+#             */
-/*   Updated: 2025/09/18 01:14:26 by sclaeys          ###   ########.fr       */
+/*   Updated: 2025/10/08 21:02:51 by sclaeys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static void	flood_fill(t_map *map, int x, int y)
 		return ;
 	cell = map->copy[y][x];
 	if (cell == '1')
+		return ;
+	if (cell == 'W')
 		return ;
 	if (cell == 'C')
 		map->c_copy--;
